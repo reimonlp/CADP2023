@@ -8,11 +8,9 @@ program E6;
 const
   //cantProductos = 200;
   cantProductos = 3; //PARA PRUEBAS
-type
-  code = 1..200; //DEFINO UN TIPO DE VARIABLE code CON RANGO DE 1 A 200
 var
   //DEFINO LAS VARIABLES A UTILIZAR
-  codigo, min1Cod, min2Cod : code;
+  codigo, min1Cod, min2Cod : integer;
   precio, min1, min2 : real;
   mas16CodPar, i : integer;
 begin
