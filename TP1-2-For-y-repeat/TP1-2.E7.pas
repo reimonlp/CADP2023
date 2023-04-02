@@ -22,6 +22,7 @@ var
 begin
   tiempoPiloto1primeros := 99999999; tiempoPiloto2primeros := 99999999; //INICIALIZA LOS MINIMOS CON VALORES EXTREMOS
   tiempoPiloto1ultimos := -1; tiempoPiloto2ultimos := -1; //INICIALIZA LOS MAXIMOS CON VALORES EXTREMOS
+  nombrePiloto1primeros := ''; nombrePiloto2primeros := ''; nombrePiloto1ultimos := ''; nombrePiloto2ultimos := '';
 
   // UTILIZA FOR PARA REPETIR LA CANTIDAD DE VECES ASIGNADA EN cantParticipantes
   for i := 1 to cantParticipantes do begin
@@ -62,15 +63,19 @@ begin
     //CASO ES MAYOR QUE tiempoPiloto1ultimos PERO MENOR QUE tiempoPiloto2ultimos (ANTEULTIMO LUGAR)
     else if (tiempoPiloto > tiempoPiloto1ultimos) then begin
       tiempoPiloto1ultimos := tiempoPiloto;
-      tiempoPiloto1ultimos := nombrePiloto;
+      nombrePiloto1ultimos := nombrePiloto;
     end;
-    
-      
+
   end; //AQUI TERMINA EL FOR
 
   writeln(); //ESPACIO EN BLANCO
-  
+  writeln('     Primer Lugar:', nombrePiloto1primeros);
   writeln(); //ESPACIO EN BLANCO
-
+  writeln('    Segundo Lugar:', nombrePiloto2primeros);
+  writeln(); //ESPACIO EN BLANCO
+  writeln(' Anteúltimo Lugar:', nombrePiloto1ultimos);
+  writeln(); //ESPACIO EN BLANCO
+  writeln('     Último Lugar:', nombrePiloto2ultimos);
+  
   readln(); //EVITA EL CIERRE DEL PROGRAMA HASTA PRESIONAR ENTER
 end.
