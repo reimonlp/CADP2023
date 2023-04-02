@@ -13,7 +13,7 @@ begin
   write('Ingrese un numero: '); //SOLICITA INGRESAR UN NUMERO
   readln(num); //ALMACENO EL NUMERO INGRESADO EN LA VARIABLE num
     
-  while (num <> 0) do begin 
+  while (num <> 0) do begin //REPETIR MIENTRAS num SEA DISTINTO DE 0
     //CASO ES MENOR QUE AMBOS MIN
     if (num < min1) and (num < min2) then begin
       min2:= min1; min1:= num;
