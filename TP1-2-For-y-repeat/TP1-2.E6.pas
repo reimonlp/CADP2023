@@ -46,7 +46,7 @@ begin
       min2Cod := codigo;
     end;
     
-    if (precio > 16) && (codigo mod 2 = 0) then
+    if (precio > 16) and (codigo mod 2 = 0) then
       mas16CodPar := mas16CodPar + 1;
   end; //AQUI TERMINA EL FOR
 
