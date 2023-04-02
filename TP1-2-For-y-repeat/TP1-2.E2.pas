@@ -8,6 +8,9 @@ const
 var
   numero, i, mayor : integer; //DEFINO LAS VARIABLES A UTILIZAR
 begin
+
+  mayor := -9999; //INICIALIZA mayor CON UN NUMERO PEQUEÑO
+  
   // UTILIZA FOR PARA REPETIR LA CANTIDAD DE VECES ASIGNADA EN numeros
   for i:=1 to numeros do begin
     write('Ingrese un numero: '); //SOLICITA INGRESAR UN NUMERO
