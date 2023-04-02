@@ -14,7 +14,7 @@ var
   //DEFINO LAS VARIABLES A UTILIZAR
   codigo, min1Cod, min2Cod : code;
   precio, min1, min2 : real;
-  mas16CodPar : integer;
+  mas16CodPar, i : integer;
 begin
   min1 := 9999; min2 := 9999; //INICIALIZA LOS MINIMOS CON VALORES EXTREMOS
   mas16CodPar := 0; //INICIALIZA mas16CodPar EN 0
