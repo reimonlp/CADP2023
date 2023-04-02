@@ -30,4 +30,6 @@ begin
   
   writeln('La suma de los ', numeros, ' numeros es ', suma);
   writeln(mayoresQue5, ' numeros fueron mayores que 5');
+  
+  readln(); //EVITA EL CIERRE DEL PROGRAMA HASTA PRESIONAR ENTER
 end.
