@@ -30,7 +30,7 @@ begin
   
   writeln(); //ESPACIO EN BLANCO
   
-  writeln('El mayor número leído fue el ', mayor, ', en la posicion ', i);
+  writeln('El mayor número leído fue el ', mayor, ', en la posicion ', posMayor);
   
   readln(); //EVITA EL CIERRE DEL PROGRAMA HASTA PRESIONAR ENTER
 end.
