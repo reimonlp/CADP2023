@@ -16,7 +16,7 @@ begin
     readln(num); //ALMACENO EL NUMERO INGRESADO EN LA VARIABLE num
     
     //CASO ES MENOR QUE AMBOS MIN
-    if (num < min1) and (num < min2) then begin
+    if (num < min1) then begin
       min2:= min1; min1:= num;
     end
     //CASO ES MENOR QUE min2 PERO MAYOR QUE min1
