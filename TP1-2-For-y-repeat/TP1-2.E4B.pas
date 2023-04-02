@@ -26,7 +26,7 @@ begin
     write('Ingrese un numero: '); //SOLICITA INGRESAR UN NUMERO
     readln(num); //ALMACENO EL NUMERO INGRESADO EN LA VARIABLE num
     
-  end; //TERMINA EL WHILE
+  end; //AQUI TERMINA EL WHILE
   
   writeln(); //ESPACIO EN BLANCO
   writeln('Los minimos son: ', min1, ' y ', min2); //IMPRIME LOS 2 MINIMOS
