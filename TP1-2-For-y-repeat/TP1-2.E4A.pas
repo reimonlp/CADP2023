@@ -9,8 +9,7 @@ begin
   
   writeln('Se le solicitará ingresar números. Ingrese el 0 como ultimo valor.');
   
-  //COMIENZA REPEAT UNTIL
-  repeat
+  repeat //COMIENZA REPEAT UNTIL
     writeln(); //ESPACIO EN BLANCO
     write('Ingrese un numero: '); //SOLICITA INGRESAR UN NUMERO
     readln(num); //ALMACENO EL NUMERO INGRESADO EN LA VARIABLE num
