@@ -27,7 +27,7 @@ begin
   
   writeln(); //ESPACIO EN BLANCO
   
-  writeln('El mayor numero ingresado fue ', mayor);
+  writeln('El mayor número leído fue el ', mayor);
   
   readln(); //EVITA EL CIERRE DEL PROGRAMA HASTA PRESIONAR ENTER
 end.
