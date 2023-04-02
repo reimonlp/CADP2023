@@ -1,5 +1,5 @@
-// 4. Realizar un programa que lea 1000 números enteros desde teclado. Informar en pantalla cuáles son los dos números mínimos leídos.
-//
+{ 4. Realizar un programa que lea 1000 números enteros desde teclado. Informar en pantalla cuáles son los dos números mínimos leídos.
+}
 program E4;
 const
   // total_numeros = 1000;
