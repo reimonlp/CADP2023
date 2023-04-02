@@ -31,6 +31,8 @@ begin
       
   until (nombre = nombreFinal); //REPETIR DESDE EL repeat HASTA QUE nombre SEA IGUAL A nombreFinal ('Zidane Zinedine') EN ESTA POSICION
   
+  writeln(); //ESPACIO EN BLANCO
+
   writeln('Alumnos aprobados: ', alumnosAprobados);
   writeln('Alumnos con nota 7: ', alumnosNota7);
 
