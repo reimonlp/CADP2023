@@ -4,12 +4,9 @@
    - La suma total de los números leídos.
 }
 program E5;
-const
-
 var
  numero, maximo, minimo, suma : integer; //DEFINO LAS VARIABLES A UTILIZAR
 begin
-
   maximo := -9999; minimo := 9999; //INICIALIZA MAXIMO Y MINIMO CON VALORES EXTREMOS
   suma := 0; //INICIALIZA suma EN 0
   
