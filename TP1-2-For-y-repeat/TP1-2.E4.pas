@@ -7,7 +7,7 @@ const
 var
   num, i, min1, min2: integer; //DEFINO LAS VARIABLES A UTILIZAR
 begin
-  min1:=9999; min2:=9999; //INICIALIZO LOS MINIMOS CON UN VALOR GRANDE
+  min1:=9999; min2:=9999; //INICIALIZA LOS MINIMOS CON UN VALOR GRANDE
   
   writeln('Se le solicitará ingresar ', total_numeros, ' números.');
   
@@ -18,7 +18,7 @@ begin
     write('(', i, ' de ', total_numeros, ') '); //DECORADOR PARA SABER EL PROGRESO
     write('Ingrese un numero: '); //SOLICITA INGRESAR UN NUMERO
     
-    readln(num); //ALMACENO EL NUMERO INGRESADO EN LA VARIABLE num
+    readln(num); //ALMACENA EL NUMERO INGRESADO EN LA VARIABLE num
 
     //CASO ES MENOR QUE AMBOS MIN
     if (num < min1) then begin

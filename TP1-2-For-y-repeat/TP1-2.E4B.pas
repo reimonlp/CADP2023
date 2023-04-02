@@ -5,13 +5,13 @@ program E4B;
 var
   num, min1, min2: integer; //DEFINO LAS VARIABLES A UTILIZAR
 begin
-  min1:=9999; min2:=9999; //INICIALIZO LOS MINIMOS CON UN VALOR GRANDE
+  min1:=9999; min2:=9999; //INICIALIZA LOS MINIMOS CON UN VALOR GRANDE
   
   writeln('Se le solicitará ingresar números. Ingrese el 0 para finalizar.');
 
   writeln(); //ESPACIO EN BLANCO
   write('Ingrese un numero: '); //SOLICITA INGRESAR UN NUMERO
-  readln(num); //ALMACENO EL NUMERO INGRESADO EN LA VARIABLE num
+  readln(num); //ALMACENA EL NUMERO INGRESADO EN LA VARIABLE num
     
   while (num <> 0) do begin //REPETIR MIENTRAS num SEA DISTINTO DE 0
     //CASO ES MENOR QUE AMBOS MIN
@@ -24,7 +24,7 @@ begin
       
     writeln(); //ESPACIO EN BLANCO
     write('Ingrese un numero: '); //SOLICITA INGRESAR UN NUMERO
-    readln(num); //ALMACENO EL NUMERO INGRESADO EN LA VARIABLE num
+    readln(num); //ALMACENA EL NUMERO INGRESADO EN LA VARIABLE num
     
   end; //AQUI TERMINA EL WHILE
   
