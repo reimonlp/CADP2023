@@ -13,11 +13,14 @@ begin
   
   // UTILIZA FOR PARA REPETIR LA CANTIDAD DE VECES ASIGNADA EN numeros
   for i:=1 to numeros do begin
+    writeln(); //ESPACIO EN BLANCO
+    
+    write('(', i:2, ' de ', numeros,') '); //DECORADOR PARA SABER EL PROGRESO
     write('Ingrese un numero: '); //SOLICITA INGRESAR UN NUMERO
     
     readln(numero); //ALMACENA EL NUMERO INGRESADO EN LA VARIABLE numero
     
-    //SI EL VALOR INGRESADO ES MAYOR QUE LA VARIABLE mayor
+    //CHEQUEA SI EL VALOR INGRESADO ES MAYOR QUE LA VARIABLE mayor
     if (numero > mayor) then
       mayor := numero; //ACTUALIZA EL VALOR DE mayor
   end;
