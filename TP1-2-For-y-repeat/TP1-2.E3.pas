@@ -6,7 +6,7 @@
 }
 program E3;
 const
-  nombreFinal = 'Zidane Zinedine';
+  nombreFinal = 'Zidane Zinedine'; //DEFINO UNA CONSTANTE nombreFinal
 var
  nombre : string; nota, alumnosAprobados, alumnosNota7 : integer; //DEFINO LAS VARIABLES A UTILIZAR
 begin
