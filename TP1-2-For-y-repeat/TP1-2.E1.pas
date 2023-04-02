@@ -24,4 +24,6 @@ begin
   writeln(); //ESPACIO EN BLANCO
   
   writeln('La suma de los ', numeros, ' numeros es ', suma);
+
+  readln(); //EVITA EL CIERRE DEL PROGRAMA HASTA PRESIONAR ENTER
 end.
