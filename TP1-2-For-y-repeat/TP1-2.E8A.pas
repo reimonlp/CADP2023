@@ -7,7 +7,7 @@
   
   a. Modifique el ejercicio anterior para que además informe el día en el que se realizó la mayor cantidad de ventas.
 }
-program E8;
+program E8A;
 const
   //diasMes = 31;
   diasMes = 3; //PARA PRUEBAS
