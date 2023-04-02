@@ -11,7 +11,7 @@ begin
   
   writeln('Se le solicitará ingresar ', total_numeros, ' números.');
   
-  // UTILIZA UN FOR PARA REPETIR LA CANTIDAD DE VECES ASIGNADA EN total_numeros
+  // UTILIZA FOR PARA REPETIR LA CANTIDAD DE VECES ASIGNADA EN total_numeros
   for i:= 1 to total_numeros do begin
     writeln(); //ESPACIO EN BLANCO
     
