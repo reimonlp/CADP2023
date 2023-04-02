@@ -1,7 +1,7 @@
 { 1. Realizar un programa que lea 10 números enteros e informe la suma total de los números leídos.
    a. Modifique el ejercicio 1 para que además informe la cantidad de números mayores a 5.
 }
-program E1;
+program E1A;
 const
   numeros = 10; //DEFINO UNA CONSTANTE numeros
 var
