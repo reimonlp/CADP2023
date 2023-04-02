@@ -3,7 +3,7 @@
    deberá informar: “El mayor número leído fue el 98”
       a. Modifique el programa anterior para que, además de informar el mayor número leído, se informe el número de orden, dentro de la secuencia, en el que fue leído. Por ejemplo, si se lee la misma secuencia: 3 5 6 2 3 10 98 8 -12 9 deberá informar: “El mayor número leído fue el 98, en la posición 7”
 }
-program E2;
+program E2A;
 const
   numeros = 10; //DEFINO UNA CONSTANTE numeros
 var
