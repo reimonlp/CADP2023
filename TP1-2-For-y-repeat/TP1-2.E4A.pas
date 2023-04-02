@@ -12,9 +12,7 @@ begin
   //COMIENZA REPEAT UNTIL
   repeat
     writeln(); //ESPACIO EN BLANCO
-    
     write('Ingrese un numero: '); //SOLICITA INGRESAR UN NUMERO
-    
     readln(num); //ALMACENO EL NUMERO INGRESADO EN LA VARIABLE num
     
     //CASO ES MENOR QUE AMBOS MIN
