@@ -7,7 +7,7 @@
 program E6;
 const
   //cantProductos = 200;
-  cantProductos = 3; //PARA PRUEBAS
+  cantProductos = 3; //UTILIZO 5 PARA PRUEBAS
 type
   code = 1..200; //DEFINO UN TIPO DE VARIABLE code CON RANGO DE 1 A 200
 var
@@ -21,6 +21,7 @@ begin
   
   // UTILIZA FOR PARA REPETIR LA CANTIDAD DE VECES ASIGNADA EN cantProductos
   for i := 1 to cantProductos do begin
+  
     writeln(); //ESPACIO EN BLANCO
     
     write('(', i:3, ' de ', cantProductos,') '); //DECORADOR PARA SABER EL PROGRESO
@@ -46,8 +47,10 @@ begin
       min2Cod := codigo;
     end;
     
+    // CHEQUEA SI precio ES MAYOR QUE 16 Y codigo ES PAR
     if (precio > 16) and (codigo mod 2 = 0) then
       mas16CodPar := mas16CodPar + 1;
+      
   end; //AQUI TERMINA EL FOR
 
   writeln(); //ESPACIO EN BLANCO
