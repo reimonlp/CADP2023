@@ -7,7 +7,7 @@
 program E6;
 const
   //cantProductos = 200;
-  cantProductos = 3; //UTILIZO 5 PARA PRUEBAS
+  cantProductos = 3; //PARA PRUEBAS
 type
   code = 1..200; //DEFINO UN TIPO DE VARIABLE code CON RANGO DE 1 A 200
 var
