@@ -29,4 +29,5 @@ begin
   writeln(); //ESPACIO EN BLANCO
   
   writeln('La suma de los ', numeros, ' numeros es ', suma);
+  writeln(mayoresQue5, ' numeros fueron mayores que 5');
 end.
