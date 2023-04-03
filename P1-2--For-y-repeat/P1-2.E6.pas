@@ -14,6 +14,7 @@ var
   precio, min1, min2 : real;
   mas16CodPar, i : integer;
 begin
+  min1Cod := 0; min2Cod := 0;
   min1 := 9999; min2 := 9999; //INICIALIZA LOS MINIMOS CON VALORES EXTREMOS
   mas16CodPar := 0; //INICIALIZA mas16CodPar EN 0
   
