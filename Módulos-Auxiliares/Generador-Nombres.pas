@@ -1,12 +1,11 @@
 program GeneradorNombresAleatorios;
 
+procedure GenerarNombreApellidoAleatorio(var Nombre, Apellido: string);
 const
   SilabasNombres: array[1..20] of string = ('ana', 'mar', 'jua', 'ped', 'pau', 'car', 'lu', 'ma', 'fe', 'so',
                                             'li', 'ro', 'me', 'pa', 'no', 'la', 'sa', 'lu', 'ba', 'mi');
   SilabasApellidos: array[1..20] of string = ('gon', 'mor', 'rom', 'gue', 'fer', 'ram', 'gar', 'ber', 'per', 'del',
                                               'tor', 'her', 'dia', 'vaz', 'cal', 'sal', 'ver', 'guez', 'ros', 'mart');
-
-procedure GenerarNombreApellidoAleatorio(var Nombre, Apellido: string);
 var
   LongitudNombre, LongitudApellido, i: integer;
 begin
