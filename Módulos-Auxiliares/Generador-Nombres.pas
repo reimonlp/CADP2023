@@ -9,7 +9,6 @@ const
 var
   LongitudNombre, LongitudApellido, i: integer;
 begin
-  Randomize;
   LongitudNombre := Random(3) + 2;
   LongitudApellido := Random(2) + 2;
   Nombre := ''; Apellido := '';
@@ -27,6 +26,7 @@ end;
 var
   Nombre, Apellido: string;
 begin
+  Randomize;
   GenerarNombreApellidoAleatorio(Nombre, Apellido);
   writeln(Nombre, ' ', Apellido);
 end.
