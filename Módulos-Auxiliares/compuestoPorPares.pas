@@ -5,7 +5,7 @@ var
   esPar: boolean;
 begin
   esPar := true;
-  while ((numero > 0) And (esPar=true)) Do
+  while ((numero > 0) and (esPar=true)) do
     begin
       esPar := (numero mod 2 = 0);
       numero := numero div 10;
