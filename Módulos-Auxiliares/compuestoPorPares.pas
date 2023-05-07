@@ -7,8 +7,8 @@ begin
   esPar := true;
   while ((numero > 0) And (esPar=true)) Do
     begin
-      esPar := (numero Mod 2 = 0);
-      numero := numero Div 10;
+      esPar := (numero mod 2 = 0);
+      numero := numero div 10;
     end;
   soloPares := esPar;
 end;
