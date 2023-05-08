@@ -1,13 +1,11 @@
 program RandomInt;
 
 function randomInt(min, max: int64) : int64;
-var
-  d: int64;
 begin
   if (min < 0) then
     min := min * -1;
 
-  randomInt := Random(max + min) - min;
+  randomInt := Random(max - min) + min;
 end;
 
 begin
