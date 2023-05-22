@@ -22,38 +22,32 @@ var
   menor: integer;   // almacena la posicion del menor en la comparacion
   aux : integer;    // variable auxiliar para no perder datos
 begin
+  // imprimo el vector original
   imprimirVectorH(v, 0, 0);
   
-  // recorro desde el 1er al anteúltimo elemento
-  for i := 1 to (numbers - 1) do begin
+  for i := 1 to (numbers - 1) do begin  // recorro desde el 1er al anteúltimo elemento
   
-    // 'menor' toma el valor la posición 'i' en cada iteración del for
-    menor := i;
+    menor := i;   // 'menor' toma el valor de 'i' en cada iteración del for
     
     // recorro desde el elemento siguiente a 'i' hasta el último del vector
     for j := (i + 1) to numbers do
     
       // si el elemento en la posición 'j' es menor que el de la posicion 'menor'
       if (v[j] < v[menor]) then
-        menor := j;   // actualizo 'menor' con el valor de 'j'
+        menor := j;             // actualizo 'menor' con el valor de 'j'
 
-    if (menor <> i) then begin  // entra al if sólo si se produjeron cambios
+    // entra al if sólo si se producirían cambios
+    if (menor <> i) then begin
+
       // notifico que se va a producir un intercambio
       writeln; writeln('          v[', i,'] > v[', menor,']'); writeln;
       
-      imprimirVectorH(v, i, menor); // imprimo el vector señalando los cambios
+      imprimirVectorH(v, i, menor);   // imprimo el vector señalando los cambios a producirse
+      
+      aux := v[menor];  // almaceno en 'aux' el valor de la posicion 'menor'
+      v[menor] := v[i];  v[i] := aux;   // realizo el desplazamiento
     end;
-    
-    // almaceno en 'aux' el valor de la posicion 'menor' que puede ser el mismo
-    // de la posición original pero esto no afecta al funcionamiento
-    aux := v[menor];
-    
-    // realizo el desplazamiento
-    v[menor] := v[i];  v[i] := aux;
-    
-    // en el caso de que las variables 'menor' e 'i' sean iguales los datos se
-    // mantuvieron en sus posiciones originales, podría implentarse un if para
-    // optimizar la ejecución
+
   end;
   
   // imprimo el vector ordenado
