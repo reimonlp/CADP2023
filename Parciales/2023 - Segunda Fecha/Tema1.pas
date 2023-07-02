@@ -110,6 +110,8 @@ procedure procesarSesiones(sesiones: lista; var visualizaciones: vGens; var maxV
   var
     i, max1, max2: Integer;
   begin
+    max1 := 0; max2 := 0;
+    
     for i := 1 to 5 do
     begin
       if (visualizaciones[i] > max1) then
