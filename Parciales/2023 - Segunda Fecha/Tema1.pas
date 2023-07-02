@@ -29,7 +29,7 @@ type
   end;
   vGens = array[gensMusic] of Integer;
 
-procedure insertarOrdenado(var sesiones : lista; sesionLeida : sesion);
+procedure insertarOrdenado(var sesiones: lista; sesionLeida: sesion);
 var
   nueva, anterior, actual: lista;
 begin
@@ -52,7 +52,7 @@ begin
   end;
 end;
 
-procedure eliminar(var sesiones : lista; titulo : string);
+procedure eliminar(var sesiones: lista; titulo: string);
 var
   anterior, actual, siguiente: lista;
 begin
@@ -63,16 +63,17 @@ begin
   end;
 
   if (actual = sesiones) then 
-    sesiones := sesiones^.s
+    sesiones := siguiente
   else if (actual <> nil) then
     anterior^.s := siguiente;
 
-  dispose(actual);
+  if (actual <> nil) then
+    dispose(actual);
 end;
 
-procedure cargarSesiones(var sesiones : lista);
+procedure cargarSesiones(var sesiones: lista);
 var
-  sesionLeida : sesion;
+  sesionLeida: sesion;
 begin
   repeat
     writeln;
@@ -86,25 +87,25 @@ begin
   until (sesionLeida.artista = ultNombre);
 end;
 
-function eqPI(numero: Integer) : Boolean;
-var
-  digito, pares, impares : Integer;
-begin
-  pares := 0; impares := 0;
-  while (numero <> 0) do begin
-    digito := numero MOD 10;
-    numero := numero DIV 10;
-
-    if (digito MOD 2 = 0) then
-      pares := pares + 1
-    else
-      impares := impares + 1;
-  end;
-
-  eqPI := (pares = impares);
-end;
-
 procedure procesarSesiones(sesiones: lista; var visualizaciones: vGens; var maxVis1, maxVis2, RegMismaCant: Integer);
+
+  function eqPI(numero: Integer) : Boolean;
+  var
+    digito, pares, impares : Integer;
+  begin
+    pares := 0; impares := 0;
+    while (numero <> 0) do begin
+      digito := numero MOD 10;
+      numero := numero DIV 10;
+
+      if (digito MOD 2 = 0) then
+        pares := pares + 1
+      else
+        impares := impares + 1;
+    end;
+
+    eqPI := (pares = impares);
+  end;
 
   procedure maximos(visualizaciones: vGens; var maxVis1, maxVis2: integer);
   var
@@ -140,10 +141,10 @@ begin
 end;
 
 var
-  sesiones : lista = nil;
-  visualizaciones : vGens;
-  maxVis1, maxVis2, RegMismaCant, i : Integer;
-  eliminarSesion : String;
+  sesiones: lista = nil;
+  visualizaciones: vGens;
+  maxVis1, maxVis2, RegMismaCant, i: Integer;
+  eliminarSesion: String;
 begin
   for i := 1 to 5 do visualizaciones[i] := 0;
   maxVis1 := -1; maxVis2 := -2;
