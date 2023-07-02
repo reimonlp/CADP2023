@@ -13,7 +13,7 @@ C. COMPLETO: Realizar un módulo que reciba un título de sesión y elimine dich
 }
 program Tema1;
 const 
-  ultNombre = 'Peso Pluma';
+  ultNombre = '3';
 type
   gensMusic = 1..5;
   sesion = record
@@ -56,19 +56,20 @@ procedure eliminar(var sesiones: lista; titulo: string);
 var
   anterior, actual, siguiente: lista;
 begin
-  actual := sesiones; anterior := sesiones;
+  actual := sesiones;
 
-  while (actual <> nil) and (actual^.d.titulo <> titulo) do begin
-    anterior := actual; actual := actual^.s; siguiente := actual^.s;
+  while ((actual <> nil) and (actual^.d.titulo <> titulo)) do begin
+    anterior := actual; actual := actual^.s;
+    if (actual <> nil) then siguiente := actual^.s;
   end;
 
-  if (actual = sesiones) then 
-    sesiones := siguiente
-  else if (actual <> nil) then
-    anterior^.s := siguiente;
-
-  if (actual <> nil) then
+  if (actual <> nil) then begin
+    if (actual = sesiones) then
+      sesiones := siguiente
+    else
+      anterior^.s := siguiente;
     dispose(actual);
+  end;
 end;
 
 procedure cargarSesiones(var sesiones: lista);
