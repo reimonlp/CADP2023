@@ -13,7 +13,7 @@ C. COMPLETO: Realizar un módulo que reciba un título de sesión y elimine dich
 }
 program Tema1;
 const 
-  ultNombre = '3';
+  ultNombre = 'Peso Pluma';
 type
   gensMusic = 1..5;
   sesion = record
