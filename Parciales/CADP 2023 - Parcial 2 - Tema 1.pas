@@ -1,7 +1,19 @@
+{
+
+CADP 2023 - Parcial - Segunda Fecha - 01/07/2023 - TEMA 1 - 8:00 AM
+
+El productor musical Bizarrap organiza sesiones musicales con diferentes artistas. Implementar un programa que lea y almacene información de dichas sesiones. De cada sesión se lee: título de sesión, nombre del artista, género musical (1: Trap Latino, 2: Reggaeton, 3: Urban, 4: Electrónica, 5: Pop Rap) y cantidad de visualizaciones en YouTube. La lectura finaliza cuando se lee la sesión del artista con nombre "Peso Pluma", la cual debe procesarse. La información debe quedar almacenada en una estructura de datos ordenada por título de sesión de forma ascendente.
+
+Una vez leída y almacenada la información, se pide:
+
+A. Informar los dos códigos de género musical con mayor cantidad de visualizaciones en YouTube.
+B. Informar la cantidad de sesiones del género "Reggaeton" cuya cantidad de visualizaciones contiene la misma cantidad de dígitos pares que impares.
+C. COMPLETO: Realizar un módulo que reciba un título de sesión y elimine dicha sesión de la estructura. El título de sesión puede no existir. Invocar el módulo desarrollado en el programa principal con un título leído por teclado.
+
+}
 program Tema1;
 const 
   ultNombre = 'Peso Pluma';
-
 type
   gensMusic = 1..5;
   sesion = record
@@ -79,7 +91,7 @@ var
   digito, pares, impares : Integer;
 begin
   pares := 0; impares := 0;
-  repeat
+  while (numero <> 0) do begin
     digito := numero MOD 10;
     numero := numero DIV 10;
 
@@ -87,16 +99,33 @@ begin
       pares := pares + 1
     else
       impares := impares + 1;
-  until (numero = 0);
+  end;
 
   eqPI := (pares = impares);
 end;
 
 procedure procesarSesiones(sesiones: lista; var visualizaciones: vGens; var maxVis1, maxVis2, RegMismaCant: Integer);
-var
-  i, max1, max2: Integer;
+
+  procedure maximos(visualizaciones: vGens; var maxVis1, maxVis2: integer);
+  var
+    i, max1, max2: Integer;
+  begin
+    for i := 1 to 5 do
+    begin
+      if (visualizaciones[i] > max1) then
+      begin
+        max2 := max1; maxVis2 := maxVis1;
+        max1 := visualizaciones[i]; maxVis1 := i;
+      end
+      else if (visualizaciones[i] > max2) then
+      begin
+        max2 := visualizaciones[i]; maxVis2 := i;
+      end;
+    end;
+  end;
+
 begin
-  max1 := 0; max2 := 0; RegMismaCant := 0;
+  RegMismaCant := 0;
 
   while (sesiones <> NIL) do begin
     visualizaciones[sesiones^.d.genero] := visualizaciones[sesiones^.d.genero] + sesiones^.d.vis;
@@ -105,21 +134,7 @@ begin
     sesiones := sesiones^.s;
   end;
 
-  for i := 1 to 5 do
-  begin
-    if (visualizaciones[i] > max1) then
-    begin
-      max2 := max1;
-      maxVis2 := maxVis1;
-      max1 := visualizaciones[i];
-      maxVis1 := i;
-    end
-    else if (visualizaciones[i] > max2) then
-    begin
-      max2 := visualizaciones[i];
-      maxVis2 := i;
-    end;
-  end;
+  maximos(visualizaciones, maxVis1, maxVis2);
 end;
 
 var
@@ -135,7 +150,7 @@ begin
 
   procesarSesiones(sesiones, visualizaciones, maxVis1, maxVis2, RegMismaCant);
 
-  WriteLn('Generos con mayor cantidad de visualiaciones: ', maxVis1, ' y ', maxVis2);
+  WriteLn('Generos con mayor cantidad de visualizaciones: ', maxVis1, ' y ', maxVis2);
   WriteLn('Reggaeton cuya cantidad de visualizaciones tiene la misma cantidad de digitos pares que impares: ', RegMismaCant);
 
   Write('Ingrese el nombre de la sesion a eliminar: '); ReadLn(eliminarSesion);
